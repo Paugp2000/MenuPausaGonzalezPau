@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ToogleController : MonoBehaviour
 {
     public Toggle fullscreen;
+    public AudioSource click;
 
     void Start()
     {
@@ -19,5 +20,6 @@ public class ToogleController : MonoBehaviour
     void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        click.playOnAwake = true;
     }
 }
